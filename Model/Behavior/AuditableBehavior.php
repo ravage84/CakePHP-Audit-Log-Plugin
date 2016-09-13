@@ -256,11 +256,6 @@ class AuditableBehavior extends \ModelBehavior {
 			array('hasMany' => array('Audit'))
 		);
 
-		/// Unset the original object value so it's ready for the next call.
-		if (isset($this->_original)) {
-			unset($this->_original[$Model->alias]);
-		}
-
 		return true;
 	}
 
